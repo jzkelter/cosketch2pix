@@ -56,8 +56,8 @@ to execute-command [command]
       let y within-boundaries (item 1 hubnet-message) min-ycor max-ycor
       setxy  x y
     ]
-    command = "drawing?" [
-      ifelse hubnet-message = true [pen-down] [pen-up]
+    command = "toggle-pen" [
+      ifelse pen-mode = "up" [pen-down set color white] [pen-up set color grey]
     ]
     command = "line-thickness" [
       set pen-size hubnet-message
@@ -115,9 +115,11 @@ to create-new-student
     set color white
     set shape "circle"
     set size .2
+    set pen-size 2
     set-pos-and-boundaries
     color-world min-xcor max-xcor min-ycor max-ycor
     set pos-list (list)
+    pen-down
   ]
 end
 
@@ -219,10 +221,10 @@ ticks
 30.0
 
 BUTTON
-40
-142
-111
-175
+82
+137
+153
+170
 NIL
 setup
 NIL
@@ -236,10 +238,10 @@ NIL
 1
 
 BUTTON
-113
-142
-184
-175
+155
+137
+226
+170
 NIL
 go
 T
@@ -252,21 +254,11 @@ NIL
 NIL
 0
 
-TEXTBOX
-13
-183
-225
-228
-Users click on their client view\nto reveal the color of patches\nat that location.
-12
-0.0
-1
-
 BUTTON
-47
-84
-124
-117
+114
+102
+191
+135
 NIL
 startup\n
 NIL
@@ -280,10 +272,10 @@ NIL
 1
 
 BUTTON
-21
-307
-100
-340
+116
+173
+195
+206
 NIL
 pix2pix\n
 NIL
@@ -617,9 +609,9 @@ need-to-manually-make-preview-for-this-model
 @#$#@#$#@
 @#$#@#$#@
 VIEW
-133
+160
 10
-563
+590
 440
 0
 0
@@ -638,17 +630,6 @@ VIEW
 0
 19
 
-SWITCH
-13
-11
-125
-44
-drawing?
-drawing?
-1
-1
--1000
-
 SLIDER
 11
 69
@@ -656,7 +637,7 @@ SLIDER
 102
 line-thickness
 line-thickness
-1.0
+2.0
 5.0
 0
 1.0
@@ -677,6 +658,20 @@ T
 OBSERVER
 NIL
 NIL
+
+BUTTON
+22
+19
+123
+52
+toggle-pen
+NIL
+NIL
+1
+T
+OBSERVER
+NIL
+T
 
 @#$#@#$#@
 default
