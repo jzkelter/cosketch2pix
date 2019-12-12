@@ -51,7 +51,7 @@ to execute-command [command]
   (ifelse
     command = "View" [
       set pos-list lput (list xcor ycor) pos-list
-    ;; extract the coordinates from the message and set within their bounds
+    ;; extract the coordinates from the message aznd set within their bounds
       let x within-boundaries (item 0 hubnet-message) min-xcor max-xcor
       let y within-boundaries (item 1 hubnet-message) min-ycor max-ycor
       setxy  x y
@@ -115,7 +115,7 @@ to create-new-student
     set color white
     set shape "circle"
     set size .2
-    set pen-size 2
+    set pen-size 1
     set-pos-and-boundaries
     color-world min-xcor max-xcor min-ycor max-ycor
     set pos-list (list)
@@ -196,11 +196,11 @@ end
 GRAPHICS-WINDOW
 231
 10
-639
-419
+495
+275
 -1
 -1
-20.0
+12.8
 1
 10
 1
@@ -630,26 +630,11 @@ VIEW
 0
 19
 
-SLIDER
-11
-69
-125
-102
-line-thickness
-line-thickness
-2.0
-5.0
-0
-1.0
-1
-NIL
-HORIZONTAL
-
 BUTTON
-11
-135
-75
-168
+23
+67
+87
+100
 undo
 NIL
 NIL
@@ -657,7 +642,7 @@ NIL
 T
 OBSERVER
 NIL
-NIL
+Y
 
 BUTTON
 22
