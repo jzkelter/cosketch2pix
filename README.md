@@ -1,6 +1,6 @@
 # cosketch2pix
 
-Collaboratively create a sketch and then transform it into a painterly rendering. Perfect for surrealist exquisite corpses! Read more about the project here.
+Collaboratively create a sketch and then transform it into a painterly rendering. Perfect for surrealist exquisite corpses! Read more about the project [here](https://medium.com/@gcaniglia1/computational-creativity-t-4d37a120a0bb?source=friends_link&sk=9fe31872b18151034a75ca36138976fb).
 
 ## Installation
 
