@@ -21,7 +21,8 @@ Do not change the size of the canvas, as it's currently optimized to output 256x
 
 Open `cosketch2pix.nlogo`, click startup, then click setup, then click go.
 
-The HubNet Control Center window contains the server address and port number. For other users to participate, they need to download NetLogo 6.1.1+ onto their computers, and then they need to open HubNet. They can then input the server address and port number to connect to the experience.
+The HubNet Control Center window contains the server address and port number. For other users to participate, they need to download NetLogo 6.1.1+ onto their computers, and then they need to open HubNet (which is installed along with NetLogo). They can then input the server address and port number to connect to the experience.
 
 When everyone is done drawing, the host can press the "pix2pix" button to convert the drawing into the painterly rendering, which will appear on each person's computer.
 
+On macOS, we recommend enabling "Mouse Keys" under Accessibility settings in System Preferences. This will allow using the 'i' key to click, which makes making curved lines easier. Otherwise, one just needs to point and click to place the lines. The 't' key toggles the pen tool, allowing the user to make unconnected lines (otherwise, they connect by default). The 'y' key is undo.
